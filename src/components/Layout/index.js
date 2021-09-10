@@ -1,7 +1,6 @@
 import style from './style.module.css'
 
-const Layout = ({title, descr, urlBg, colorBg}) => {
-    const descrStyles = [style.desc, style.full];
+const Layout = ({title, urlBg, colorBg, children}) => {
     const sectionStyle = {
         background: urlBg ? `url(${urlBg})` : colorBg
     }
@@ -13,8 +12,8 @@ const Layout = ({title, descr, urlBg, colorBg}) => {
                         <h3>{title}</h3>
                         <span className={style.separator} />
                     </div>
-                    <div className={descrStyles}>
-                        <p>{descr}</p>
+                    <div className={`${style.desc} ${style.full}`}>
+                        {children}
                     </div>
                 </article>
             </div>
