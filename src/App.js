@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Layout from "./components/Layout";
 import Footer from "./components/Footer";
 import PokemonCard from "./components/PokemonCard";
-import * as PokemodData from "./PokenomData";
+import * as PokemonData from "./PokenomData";
 
 import bg1 from './assets/bg1.jpg';
 import bg2 from './assets/bg2.jpg';
@@ -20,7 +20,7 @@ function App() {
             <Layout title={'Layout 2'} descr={'Description of Layout 2'} colorBg={'yellow'}>
                 <div className="flex">
                     {
-                        PokemodData.POKEMONS.map(item =>
+                        PokemonData.POKEMONS.map(item =>
                             <PokemonCard key={item.id}
                                 id={item.id}
                                 type={item.type}
